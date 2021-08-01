@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  </head>
+  <body>
+      <div class="container">
+        <h1>This is a simple Hello World generator</h1>
+        <p>Hello World will be displayed for an infinite number of times</p>
+      </div>
+    <main>
+      <div class="container">
+        <div class="row">
+          <button class="btn">Click me</button>
+        </div>
+        <div class="row">
+          <div id="hello-world"></div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (function() {
+        const appendHelloWorld = () => {
+          const p = document.createElement('p');
+          p.innerHTML = "Hello aWorld"
+          document.querySelector('#hello-world').append(p);
+        }
+
+        const button = document.querySelector('button');
+        button.addEventListener('click', appendHelloWorld);
+      })();
+    </script>
+  </body>
+</html>
